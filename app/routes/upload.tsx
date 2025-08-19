@@ -41,7 +41,10 @@ const Upload = () => {
 
         setStatusText('Analyzing...');
 
-        const feedback = await ai.feedback()
+        const feedback = await ai.feedback(
+            uploadedFile.path,
+            `You are an expert in ATS (applicant tracking system) and resume analysis`
+        )
     }
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
